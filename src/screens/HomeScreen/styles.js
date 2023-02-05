@@ -1,5 +1,5 @@
 //* REACT IMPORTS \\
-import { StyleSheet, Dimensions } from "react-native";
+import { StyleSheet, Dimensions, Platform, StatusBar } from "react-native";
 
 //* THEME IMPORTS \\
 import { colors } from '../../../theme/colors';
@@ -8,23 +8,25 @@ import { colors } from '../../../theme/colors';
 //* STYLE EXPORT CODE \\
 const { height, width } = Dimensions.get('window');
 
+const isAndroid = Platform.OS === 'android';
+
 export const styles = StyleSheet.create({
   page: {
     flex: 1,
     backgroundColor: colors.secondary,
+    marginTop: isAndroid ? StatusBar.currentHeight : 0,
   },
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+    padding: 10,
+    // backgroundColor: 'teal'
   },
   logo: {
     width: 135,
     height: 135,
-    marginVertical: 5,
-    marginRight: 5,
   },
   section: {
-    padding: 5,
     // backgroundColor: colors.complete,
   },
   user: {
@@ -58,11 +60,19 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'space-evenly',
     borderRadius: 25,
+    borderWidth: 3,
+    borderColor: colors.primary
 
   },
   scottLogo: {
     width: 130,
     height: 130,
+  },
+  phone: {
+    fontWeight: '500',
+  },
+  address: {
+    fontWeight: '500',
   },
   button: {
     width: 120,
@@ -76,7 +86,7 @@ export const styles = StyleSheet.create({
   },
   buttonTxt: {
     color: colors.light,
-    fontSize: 18,
+    // fontSize: 16,
     fontWeight: '500',
   },
   footer: {

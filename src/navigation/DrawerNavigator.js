@@ -13,16 +13,18 @@ const Drawer = createDrawerNavigator();
 
 export const DrawerNavigator = () => {
   return (
-    <Drawer.Navigator>
+    <Drawer.Navigator
+    >
 
       <Drawer.Screen
         name='Welcome'
         component={Home}
-        options={{ headerStyle: { backgroundColor: colors.light, borderBottomColor: colors.accent, borderBottomWidth: 5 }, drawerType: 'back' }}
+        options={{ headerStyle: { backgroundColor: colors.light, borderBottomColor: colors.accent, borderBottomWidth: 5 }, drawerType: 'slide', headerShown: false }}
       />
       <Drawer.Screen
         name='Dashboard'
         component={DashBoard}
+        options={{ drawerType: 'slide', }}
       />
 
     </Drawer.Navigator>

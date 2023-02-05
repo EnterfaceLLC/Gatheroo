@@ -1,6 +1,6 @@
 //* REACT IMPORTS \\
 import React, { useState, useEffect } from 'react';
-import { View, Text, Image, Pressable } from 'react-native';
+import { View, Text, Image, Pressable, SafeAreaView } from 'react-native';
 
 //* NAVIGATION IMPORTS \\
 import { useNavigation } from '@react-navigation/native';
@@ -33,7 +33,7 @@ const Home = () => {
   }, [])
 
   return (
-    <View style={styles.page}>
+    <SafeAreaView style={styles.page}>
       <View style={styles.header}>
 
         <View style={styles.section}>
@@ -57,9 +57,10 @@ const Home = () => {
             resizeMode='contain'
             style={styles.scottLogo}
           />
-          <Text>Dashboard Information Here</Text>
+          <Text style={styles.phone}>785-235-7480</Text>
+          <Text style={styles.address}>401 SE Market St, Topeka, KS 66607</Text>
           <Pressable style={styles.button} onPress={Press}>
-            <Text style={styles.buttonTxt}>PICK UP</Text>
+            <Text style={styles.buttonTxt}>DASHBOARD</Text>
           </Pressable>
         </View>
       </View>
@@ -92,7 +93,7 @@ const Home = () => {
           <Text style={styles.linkTxt}>Topeka 501</Text>
         </View>
       </View>
-    </View>
+    </SafeAreaView>
   );
 };
 

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "1",
+    "name": "Hiliana Zamora",
+    "grade": "Pre-K",
+    "teacher": "Ms. Chelsea",
+    "classroom": "101",
+    "pod": "100"
+  },
+  {
+    "id": "2",
+    "name": "Novina Zamora",
+    "grade": "5",
+    "teacher": "Ms. Martinez",
+    "classroom": "401",
+    "pod": "400"
+  },
+  {
+    "id": "3",
+    "name": "Alexios Zamora",
+    "grade": "Pre-K",
+    "teacher": "Ms. Chelsea",
+    "classroom": "102",
+    "pod": "100"
+  },
+]
