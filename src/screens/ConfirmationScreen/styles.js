@@ -11,10 +11,15 @@ const { height, width } = Dimensions.get('window');
 export const styles = StyleSheet.create({
   page: {
     flex: 1,
-    backgroundColor: colors.secondary
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: colors.secondary,
+
   },
-  headerTxt: {
-    color: colors.accent,
-    fontSize: 20,
-  }
+  message: {
+    color: colors.light,
+    fontSize: 25,
+    fontWeight: '500',
+    marginVertical: 25
+  },
 });

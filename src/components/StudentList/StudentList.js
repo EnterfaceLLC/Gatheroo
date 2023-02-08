@@ -12,7 +12,7 @@ const StudentList = ({ student }) => {
 
   const pressSelect = () => {
     setSelect(v => !v);
-    console.warn(select);
+    console.log('selected');
   };
 
   return (

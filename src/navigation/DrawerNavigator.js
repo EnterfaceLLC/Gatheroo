@@ -3,10 +3,15 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 
 //* THEME IMPORTS \\
 import { colors } from '../../theme/colors';
+// import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 //* SCREEN IMPORTS \\
 import Home from '../screens/HomeScreen';
-import DashBoard from '../screens/DashBoardScreen';
+// import DashBoard from '../screens/DashBoardScreen';
+// import ConfirmationScreen from '../screens/ConfirmationScreen';
+
+//* STACK NAVIGATION IMPORTS \\
+import { StackNavigator } from './StackNavigator';
 
 //* NAVIGATION CODE \\
 const Drawer = createDrawerNavigator();
@@ -23,9 +28,13 @@ export const DrawerNavigator = () => {
       />
       <Drawer.Screen
         name='Dashboard'
-        component={DashBoard}
-        options={{ drawerType: 'slide', }}
+        component={StackNavigator}
+        options={{ drawerType: 'slide', headerStyle: { backgroundColor: colors.primary, borderBottomColor: colors.accent, borderBottomWidth: 3 }, }}
       />
+      {/* <Drawer.Screen
+        name='Confirmation'
+        component={ConfirmationScreen}
+      /> */}
 
     </Drawer.Navigator>
   );

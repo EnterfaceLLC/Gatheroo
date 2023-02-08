@@ -23,4 +23,12 @@
     "classroom": "102",
     "pod": "100"
   },
+  {
+    "id": "4",
+    "name": "Rogelio Zamora III",
+    "grade": "K",
+    "teacher": "Ms. Chelsea",
+    "classroom": "201",
+    "pod": "200"
+  }
 ]
